@@ -45,7 +45,7 @@ function kopyala(arr){
   for(let i = 0; i < arr.length; i++){
     newArr[i] = arr[i];
   }
-  return arr;
+  return newArr;
 }
 
 
