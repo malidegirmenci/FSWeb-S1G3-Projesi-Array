@@ -215,13 +215,17 @@ Aşağıdakileri yapmak için rastgeleTatlar işlevini ve yeni dizileri kullanı
 */
 
 
-function rastgeleTatlar(originArr1, originArr2, originArr3){
-  const newArr = originArr1.concat(originArr2,originArr3);
+function rastgeleTatlar(originArr1, originArr2, originArr3,originArr4){
+  const newArr = originArr1.concat(originArr2,originArr3,originArr4);
   const rastgeleTatlarArr = [];
-  let randNum = Math.floor(Math.random()*newArr.length);
-  console.log("Rastgele Lezzet: "+newArr[randNum]);
    for (let i = 0; i < 25; i++){
-     rastgeleTatlarArr[i] = newArr[i];
+     var randNum = Math.floor(Math.random()*newArr.length);
+     if(rastgeleTatlarArr.includes(newArr[randNum])){
+       var randNum = Math.floor(Math.random()*newArr.length);
+       rastgeleTatlarArr[i] = newArr[randNum];
+     } else {
+       rastgeleTatlarArr[i] = newArr[randNum];
+     }
    }
    return rastgeleTatlarArr
  }
